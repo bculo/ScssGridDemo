@@ -2,6 +2,11 @@
     background-color: $color-primary;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 1 / -1;
+
+    @media only screen and (max-width: $bp-large){
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
 }
 
 .nav-btn {
@@ -26,10 +31,18 @@
     }
 
     &::before {
-        top: -1.5rem;
+        top: -1.4rem;
     }
 
     &::after {
-        top: 1.5rem;
+        top: 1.4rem;
+    }
+
+    @media only screen and (max-width: $bp-large){
+        display: block;
+        margin-top: 2.9rem;
+        margin-left: auto;
+        margin-right: 2rem;
+        margin-bottom: 0;
     }
 }
